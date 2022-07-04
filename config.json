@@ -1,6 +1,6 @@
 {
     "localAddress":"webs.up.railway.app",
-    "localPort": 1080,
+    "localPort": 1081,
     "serverAddress": "webs.up.railway.app",
     "serverPort": 8388,
     "password": "shadowsocks-over-websocket",
