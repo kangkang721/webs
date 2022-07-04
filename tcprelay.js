@@ -179,6 +179,7 @@ TCPRelay.prototype.initServer = function() {
 			});
 			server.listen(port, address);
 		} else {
+			self.logger.info(self.getServerName(), 'is listening on', address + ':' + port);
 			server = self.server = new WebSocket.Server({
 				host: address,
 				port: port,
