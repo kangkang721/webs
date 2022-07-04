@@ -5,6 +5,7 @@ const WebSocket = require('ws');
 const Encryptor = require('shadowsocks/lib/shadowsocks/encrypt').Encryptor;
 const WSErrorCode = require('ws/lib/ErrorCodes');
 
+
 const MAX_CONNECTIONS = 50000;
 
 const TCP_RELAY_TYPE_LOCAL = 1;
