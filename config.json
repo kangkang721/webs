@@ -1,5 +1,5 @@
 {
-    "localAddress":"127.0.0.1",
+    "localAddress":"webs.up.railway.app",
     "localPort": 1080,
     "serverAddress": "webs.up.railway.app",
     "serverPort": 8388,
