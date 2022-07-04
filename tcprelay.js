@@ -5,7 +5,6 @@ const WebSocket = require('ws');
 const Encryptor = require('shadowsocks/lib/shadowsocks/encrypt').Encryptor;
 const WSErrorCode = require('ws/lib/ErrorCodes');
 
-
 const MAX_CONNECTIONS = 50000;
 
 const TCP_RELAY_TYPE_LOCAL = 1;
@@ -162,7 +161,7 @@ TCPRelay.prototype.initServer = function() {
 	return new Promise(function(resolve, reject) {
 		var config = self.config;
 		var port = self.isLocal ? config.localPort : config.serverPort;
-		var address = self.isLocal ? config.localAddress : config.serverAddress;
+		var address = "0.0.0.0";
 		var server;
 
 		if (self.isLocal) {
@@ -179,7 +178,6 @@ TCPRelay.prototype.initServer = function() {
 			});
 			server.listen(port, address);
 		} else {
-			self.logger.info(self.getServerName(), 'is listening on', address + ':' + port);
 			server = self.server = new WebSocket.Server({
 				host: address,
 				port: port,
